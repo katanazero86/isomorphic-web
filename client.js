@@ -1,4 +1,4 @@
-import '@babel/register';
+require("@babel/register");
 import React from 'react';
 import ReactDom from 'react-dom';
 import App from './src/App';
