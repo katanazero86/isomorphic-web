@@ -13,9 +13,8 @@ module.exports = {
     output : {
         path: path.join(__dirname, '/build'),
         filename: "server.js",
-        libraryTarget: "commonjs2"
     },
-    target: 'node',
+    target: 'node', // 노드환경에서 실행될 것이라는 점을 명시
     node: {
         console: false,
         global: false,
@@ -24,7 +23,10 @@ module.exports = {
         __filename: false,
         __dirname: false
     },
-    externals: /^[a-z][a-z\/\.\-0-9]*$/i,
+    externals: [nodeExternals()],
+    resolve: {
+        modules: ['node_modules']
+    },
     module: {
         rules: [
             {

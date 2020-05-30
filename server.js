@@ -1,5 +1,5 @@
 const express = require('express');
-import path from 'path';
+const path = require('path');
 import React from 'react';
 import ReactDom from 'react-dom/server';
 
