@@ -32,5 +32,6 @@ create file webpack.server.js
 
 참조 : https://www.pluralsight.com/guides/how-to-partly-server-side-render-in-react
 참조 : https://github.com/PacktPublishing/Isomorphic-JavaScript-Web-Development
+참조 : https://livebook.manning.com/book/isomorphic-web-applications/chapter-1/28
 
 ```
