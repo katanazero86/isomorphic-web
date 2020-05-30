@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production --config ./webpack.server.js && webpack --mode production",
+    "build": "webpack --mode production",
     "serve": "nodemon --exec node ./serverRun.js",
     "start": "npm run build && node ./build/server.js"
   },
