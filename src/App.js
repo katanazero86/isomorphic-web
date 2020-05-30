@@ -6,9 +6,7 @@ export default function App() {
     const [time, setTime] = useState(null);
 
     useEffect(() => {
-
         setTime(moment().format('hh:mm:ss a'));
-
     }, []);
 
     return (

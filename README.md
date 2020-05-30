@@ -27,8 +27,10 @@ create file srver.js
 create file client.js
 create file .babelrc
 create file webpack.config.js
+create file webpack.server.js
 
 
 참조 : https://www.pluralsight.com/guides/how-to-partly-server-side-render-in-react
+참조 : https://github.com/PacktPublishing/Isomorphic-JavaScript-Web-Development
 
 ```
