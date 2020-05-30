@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path');
+import path from 'path';
 import React from 'react';
 import ReactDom from 'react-dom/server';
 
@@ -12,6 +12,8 @@ const port = process.env.PORT || 3000;
 expressApp.use(express.static(path.join(__dirname, 'public')));
 
 expressApp.get('*', (request, response) => {
+
+    console.log('request..');
 
     const app = ReactDom.renderToString(<App/>); // App 컴포넌트를 HTML 문자열로 랜더링
     const html = ReactDom.renderToStaticMarkup(<Html

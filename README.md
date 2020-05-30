@@ -2,6 +2,10 @@
 
 ### project setting
 ```
+
+- node.js 10.16.3
+- npm 6.14.5
+
 create file README.md 
 npm init -y
 
