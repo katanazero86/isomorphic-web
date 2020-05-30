@@ -1,8 +1,3 @@
-require("@babel/register")({
-    presets: ["@babel/env", "@babel/preset-react"],
-    ignore: [/node_modules/],
-});
-
 import React from 'react';
 import ReactDom from 'react-dom';
 import App from './src/App';

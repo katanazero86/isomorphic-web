@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "serve": "nodemon --exec node ./serverRun.js",
+    "serve": "nodemon --exec node ./server/serverRun.js",
     "start": "npm run build && node ./build/server.js"
   },
   "keywords": [],

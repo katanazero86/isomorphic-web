@@ -3,8 +3,8 @@ const path = require('path');
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-import App from './src/App';
-import Html from "./src/Html";
+import App from '../src/App';
+import Html from "../src/Html";
 
 const expressApp = express();
 const port = process.env.PORT || 3000;

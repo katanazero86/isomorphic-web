@@ -10,7 +10,7 @@ const nodeExternals = require('webpack-node-externals');
 
 
 const ssr = {
-    entry: './server.js',
+    entry: './server/server.js',
     output: {
         path: path.join(__dirname, '/build'),
         filename: "server.js",
@@ -30,7 +30,7 @@ const ssr = {
                 include: [
                     path.join(__dirname, '/src'),
                     // path.join(__dirname, '/client.js'),
-                    path.join(__dirname, '/server.js'),
+                    path.join(__dirname, '/server/server.js'),
                 ],
                 use: {
                     loader: 'babel-loader'
