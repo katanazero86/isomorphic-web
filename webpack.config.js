@@ -16,14 +16,8 @@ const ssr = {
         filename: "server.js",
     },
     target: 'node', // 노드환경에서 실행될 것이라는 점을 명시
-    node: {
-        console: false,
-        global: false,
-        process: false,
-        Buffer: false,
-        __filename: false,
-        __dirname: false
-    },
+    // node : node.js의 global property 에 polyfill 을 적용할지 여부
+    node: false,
     externals: [nodeExternals()],
     resolve: {
         modules: ['node_modules']
