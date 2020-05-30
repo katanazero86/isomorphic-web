@@ -9,7 +9,7 @@ import Html from "./src/Html";
 const expressApp = express();
 const port = process.env.PORT || 3000;
 
-expressApp.use(express.static(path.join(__dirname, 'public')));
+expressApp.use(express.static(path.join(__dirname, '')));
 
 expressApp.get('*', (request, response) => {
 

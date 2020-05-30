@@ -5,6 +5,7 @@ import App from './src/App';
 
 function run() {
     // render() 와 동일하지만, ReactDOMServer에서 HTML 내용을 렌더링 한 hydrate (이벤트 리스너 첨부) 컨테이너에 사용됩니다. React는 이벤트 리스너를 기존 마크 업에 첨부하려고 시도
+    console.log(`run.. ReactDom.hydrate`)
     ReactDom.hydrate(<App/>, document.getElementById('app'));
 }
 

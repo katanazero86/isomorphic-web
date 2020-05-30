@@ -25,6 +25,8 @@ npm i -D html-webpack-plugin
 npm i -D mini-css-extract-plugin
 npm i -D clean-webpack-plugin
 npm i -D copy-webpack-plugin
+npm i -D webpack-node-externals
+
 
 
 create file srver.js
@@ -33,7 +35,8 @@ create file .babelrc
 create file webpack.config.js
 create file webpack.server.js
 
-
+참조 : https://babeljs.io/docs/en/babel-register
+참조 : https://stackoverflow.com/questions/41692643/webpack-and-express-critical-dependencies-warning
 참조 : https://www.pluralsight.com/guides/how-to-partly-server-side-render-in-react
 참조 : https://github.com/PacktPublishing/Isomorphic-JavaScript-Web-Development
 참조 : https://livebook.manning.com/book/isomorphic-web-applications/chapter-1/28

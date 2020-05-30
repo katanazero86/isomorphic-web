@@ -9,12 +9,10 @@ const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 module.exports = {
 
-    entry: {
-        client: path.join(__dirname, '/client.js'),
-    },
+    entry: path.join(__dirname, '/client.js'),
     output: {
         publicPath: "/",
-        path: path.join(__dirname, '/build/public'),
+        path: path.join(__dirname, '/build'),
         filename: "client.js"
     },
     module: {
