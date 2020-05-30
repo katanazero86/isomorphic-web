@@ -10,7 +10,7 @@ const nodeExternals = require('webpack-node-externals');
 
 
 const ssr = {
-    entry: path.join(__dirname, '/server.js'),
+    entry: './server.js',
     output: {
         path: path.join(__dirname, '/build'),
         filename: "server.js",
@@ -47,12 +47,13 @@ const ssr = {
 };
 
 const csr = {
-    entry: path.join(__dirname, '/client.js'),
+    entry:'./client.js',
     output: {
-        publicPath: "/",
+        publicPath: '/',
         path: path.join(__dirname, '/build'),
-        filename: "client.js"
+        filename: 'client.js'
     },
+    target: 'web',
     module: {
         rules: [
             {

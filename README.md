@@ -41,6 +41,7 @@ create file webpack.server.js
 참조 : https://github.com/PacktPublishing/Isomorphic-JavaScript-Web-Development
 참조 : https://livebook.manning.com/book/isomorphic-web-applications/chapter-1/28
 참조 : https://github.com/donggyushin/understanding-server-side-rendering-in-react
+참조 : https://dev-momo.tistory.com/entry/React-Server-Side-Rendering
 
 build 시, moment.js에 모든 locale 이 들어가서 용량이 커짐
 moment-locales-webpack-plugin 을 사용하여 용량을 줄임

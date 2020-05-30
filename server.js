@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 import React from 'react';
-import ReactDom from 'react-dom/server';
+import ReactDOMServer from 'react-dom/server';
 
 import App from './src/App';
 import Html from "./src/Html";
@@ -15,8 +15,8 @@ expressApp.get('*', (request, response) => {
 
     console.log('request..');
 
-    const app = ReactDom.renderToString(<App/>); // App 컴포넌트를 HTML 문자열로 랜더링
-    const html = ReactDom.renderToStaticMarkup(<Html
+    const app = ReactDOMServer.renderToString(<App/>); // App 컴포넌트를 HTML 문자열로 랜더링
+    const html = ReactDOMServer.renderToStaticMarkup(<Html
         title="Sample Title123"
         description="동형앱 예제 어렵다!!"
         body={app}
