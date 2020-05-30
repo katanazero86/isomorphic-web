@@ -12,7 +12,7 @@ export default function Html({title, description, body}) {
                     {title || ''}
                 </title>
             </head>
-            <script type="module" src="client.js"></script>
+            <script src="client.js"></script>
         <body>
             <div id="app" dangerouslySetInnerHTML={{__html : body}} />
         </body>
