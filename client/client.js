@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import App from '../src/App';
 
+console.log('load client.js..');
+
 function run() {
     // render() 와 동일하지만, ReactDOMServer 에서 HTML 내용을 렌더링 한 hydrate (이벤트 리스너 첨부) 컨테이너에 사용됩니다. React 는 이벤트 리스너를 기존 마크 업에 첨부하려고 시도
     console.log(`run.. ReactDom.hydrate`);
