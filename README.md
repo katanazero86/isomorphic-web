@@ -10,7 +10,7 @@ create file README.md
 npm init -y
 
 npm i -S react react-dom
-npm i -S express bluebird moment
+npm i -S express moment
 npm i -D nodemon
 
 // babel
@@ -26,8 +26,6 @@ npm i -D mini-css-extract-plugin
 npm i -D clean-webpack-plugin
 npm i -D copy-webpack-plugin
 npm i -D webpack-node-externals
-
-
 
 create file srver.js
 create file client.js

@@ -47,7 +47,7 @@ const ssr = {
 };
 
 const csr = {
-    entry:'./client.js',
+    entry:'./client/client.js',
     output: {
         publicPath: '/',
         path: path.join(__dirname, '/build'),
@@ -61,7 +61,7 @@ const csr = {
                 exclude: /node_modules/,
                 include: [
                     path.join(__dirname, '/src'),
-                    path.join(__dirname, '/client.js'),
+                    path.join(__dirname, '/client/client.js'),
                     // path.join(__dirname, '/server.js'),
                 ],
                 use: {
