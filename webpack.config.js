@@ -9,6 +9,7 @@ const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 
+// SSR
 const ssr = {
     entry: './server/server.js',
     output: {
@@ -29,7 +30,6 @@ const ssr = {
                 exclude: /node_modules/,
                 include: [
                     path.join(__dirname, '/src'),
-                    // path.join(__dirname, '/client.js'),
                     path.join(__dirname, '/server/server.js'),
                 ],
                 use: {
@@ -46,6 +46,7 @@ const ssr = {
     ],
 };
 
+// CSR
 const csr = {
     entry:'./client/client.js',
     output: {
@@ -62,7 +63,6 @@ const csr = {
                 include: [
                     path.join(__dirname, '/src'),
                     path.join(__dirname, '/client/client.js'),
-                    // path.join(__dirname, '/server.js'),
                 ],
                 use: {
                     loader: 'babel-loader'

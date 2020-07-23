@@ -3,12 +3,20 @@ const path = require('path');
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const config = require('../webpack.config.js');
+const compiler = webpack(config);
+
 import App from '../src/App';
 import Html from "../src/Html";
 
 const expressApp = express();
 const port = process.env.PORT || 3000;
 
+expressApp.use(webpackDevMiddleware(compiler, {
+    publicPath: '/'
+}));
 expressApp.use(express.static(path.join(__dirname, '')));
 
 expressApp.get('*', (request, response) => {
