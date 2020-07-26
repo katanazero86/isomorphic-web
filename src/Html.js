@@ -12,7 +12,7 @@ export default function Html({title, description, body}) {
                     {title || ''}
                 </title>
             </head>
-            <script src="/client.js"></script>
+            <script src="/client.js" defer></script>
         <body style={{height:'100%'}}>
             <div id="app" style={{height:'100%'}} dangerouslySetInnerHTML={{__html : body}} />
         </body>
