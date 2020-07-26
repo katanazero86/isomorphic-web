@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "serve": "nodemon --exec node ./server/serverRun.js",
-    "start": "npm run build && node ./build/server.js",
-    "dev": "webpack-dev-server --hot --open --port 8080"
+    "dev": "nodemon --exec node ./server/serverRun.js",
+    "start": "set NODE_ENV=production && npm run build && node ./build/server.js"
   },
   "keywords": [],
   "author": "",

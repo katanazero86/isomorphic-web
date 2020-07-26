@@ -1,4 +1,5 @@
 import React from 'react';
+
 import App from "../src/App";
 import NotFound from "../src/components/error/NotFound";
 import Error from "../src/components/error/Error";
@@ -11,7 +12,8 @@ const routes = [
     {name : '500', path : '/500', action : () => <Error/>},
 ];
 
-const router = {
+
+export default {
     match(location) {
         console.log(location.path);
         const route = routes.find(x => x.path === location.path);
@@ -28,6 +30,4 @@ const router = {
             return routes.find(x => x.path === '/404').action();
         }
     }
-};
-
-export default router;
+}

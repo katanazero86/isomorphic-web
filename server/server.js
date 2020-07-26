@@ -16,9 +16,11 @@ import Html from "../src/Html";
 const expressApp = express();
 const port = process.env.PORT || 3000;
 
-expressApp.use(webpackDevMiddleware(compiler, {
-    publicPath: '/'
-}));
+if (process.env.NODE_ENV != 'production') {
+    expressApp.use(webpackDevMiddleware(compiler, {
+        publicPath: '/'
+    }));
+}
 expressApp.use(express.static(path.join(__dirname, '')));
 
 expressApp.get('*', (request, response) => {
