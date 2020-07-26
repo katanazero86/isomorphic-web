@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import moment from "moment";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
 
@@ -11,9 +13,13 @@ export default function App() {
     }, []);
 
     return (
-        <div>
-            <h1>Sample App</h1>
-            <p>Current time is {time}</p>
+        <div style={{height:'100%'}}>
+            <Header/>
+            <div style={{height:'100%'}}>
+                <h1>Sample App</h1>
+                <p>Current time is {time}</p>
+            </div>
+            <Footer/>
         </div>
     )
 

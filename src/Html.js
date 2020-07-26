@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Html({title, description, body}) {
     return (
-        <html>
+        <html style={{height:'100%'}}>
             <head>
                 <meta charSet="UTF-8"/>
                 <meta name="description" content={description || ''}/>
@@ -13,8 +13,8 @@ export default function Html({title, description, body}) {
                 </title>
             </head>
             <script src="/client.js"></script>
-        <body>
-            <div id="app" dangerouslySetInnerHTML={{__html : body}} />
+        <body style={{height:'100%'}}>
+            <div id="app" style={{height:'100%'}} dangerouslySetInnerHTML={{__html : body}} />
         </body>
         </html>
     )

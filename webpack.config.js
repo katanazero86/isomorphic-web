@@ -11,6 +11,7 @@ const nodeExternals = require('webpack-node-externals');
 
 // SSR
 const ssr = {
+    mode : 'development',
     entry: './server/server.js',
     output: {
         path: path.join(__dirname, '/build'),
@@ -30,6 +31,7 @@ const ssr = {
                 exclude: /node_modules/,
                 include: [
                     path.join(__dirname, '/src'),
+                    path.join(__dirname, '/routes/index.js'),
                     path.join(__dirname, '/server/server.js'),
                 ],
                 use: {
@@ -48,6 +50,7 @@ const ssr = {
 
 // CSR
 const csr = {
+    mode : 'development',
     entry:'./client/client.js',
     output: {
         publicPath: '/',
@@ -62,6 +65,7 @@ const csr = {
                 exclude: /node_modules/,
                 include: [
                     path.join(__dirname, '/src'),
+                    path.join(__dirname, '/routes/index.js'),
                     path.join(__dirname, '/client/client.js'),
                 ],
                 use: {

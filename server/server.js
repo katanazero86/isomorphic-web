@@ -8,6 +8,8 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const config = require('../webpack.config.js');
 const compiler = webpack(config);
 
+import Router from '../routes/index'; // 라우터
+
 import App from '../src/App';
 import Html from "../src/Html";
 
@@ -22,12 +24,14 @@ expressApp.use(express.static(path.join(__dirname, '')));
 expressApp.get('*', (request, response) => {
 
     console.log('request..');
+    console.log(Router.match(request));
+    const component = ReactDOMServer.renderToString(Router.match(request));
 
-    const app = ReactDOMServer.renderToString(<App/>); // App 컴포넌트를 HTML 문자열로 랜더링
+    // const app = ReactDOMServer.renderToString(<App/>); // App 컴포넌트를 HTML 문자열로 랜더링
     const html = ReactDOMServer.renderToStaticMarkup(<Html
-        title="Sample Title123"
-        description="동형앱 예제 어렵다!!"
-        body={app}
+        title="Sample Title"
+        description="Isomorphic web application sample"
+        body={component}
     />);
 
     response.send(`<!DOCTYPE html>` + html);
