@@ -25,7 +25,7 @@ expressApp.use(express.static(path.join(__dirname, '')));
 
 expressApp.get('*', (request, response) => {
 
-    console.log('request..');
+    console.log('request.. in express');
     console.log(Router.match(request));
     const component = ReactDOMServer.renderToString(Router.match(request));
 

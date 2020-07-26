@@ -4,6 +4,7 @@ export default function Header() {
 
     function goPage(path) {
         console.log(`goPage..`);
+        // TODO : 서버단에서 renderToString() 호출 시, window 객체가 정의되지 않는다는 에러 발생
         // console.log(window.location);
         // window.location = path;
     }
