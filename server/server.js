@@ -27,7 +27,8 @@ expressApp.get('*', (request, response) => {
 
     console.log('request.. in express');
     console.log(Router.match(request));
-    const component = ReactDOMServer.renderToString(Router.match(request));
+    const requestComponent = Router.match(request);
+    const component = ReactDOMServer.renderToString(requestComponent);
 
     // const app = ReactDOMServer.renderToString(<App/>); // App 컴포넌트를 HTML 문자열로 랜더링
     const html = ReactDOMServer.renderToStaticMarkup(<Html
