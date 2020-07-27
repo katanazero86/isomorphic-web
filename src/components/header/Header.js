@@ -3,9 +3,7 @@ import React from 'react';
 export default function Header() {
 
     function goPage(path) {
-        console.log(`goPage..`);
-        console.log(window.location);
-        // window.location = path;
+        window.location = path;
     }
 
     return (
